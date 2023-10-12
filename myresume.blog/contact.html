@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details</title>
+    <style>
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('new.jpg'); /* Replace 'background.jpg' with your actual background image file path */
+            background-size: cover;
+            background-position: center;
+            color: #fff; /* Text color against the background */
+        }
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+ #contact-info {
+            /* Additional styling for the contact details container if needed */
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better readability */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contact-info">
+        <!-- Contact details will be displayed here dynamically -->
+    </div>
+
+    <script>
+        // JavaScript object to store contact details
+        var contactDetails = {
+            linkedin: "https://www.linkedin.com/in/david-mutania-88546927a?utm_source=share&utm_campaign=share_via&utm_content=profile$utm_medium=android app",
+            email: "Kyalo897@gmail.com",
+            github: "https://github.com/punkjoker",
+            // Add more social media or contact information as needed
+        };
+
+        // Function to display contact details on the webpage
+        function displayContactDetails() {
+            var contactInfoDiv = document.getElementById("contact-info");
+            var detailsHTML = "<h2>Contact Details</h2>";
+            detailsHTML += "<p><img class='social-icon' src='linkedin.png' alt='LinkedIn Icon'><a href='" + contactDetails.linkedin + "' target='_blank'>" + contactDetails.linkedin + "</a></p>";
+            detailsHTML += "<p><img class='social-icon' src='gmail.png' alt='Email Icon'><a href='mailto:" + contactDetails.email + "'>" + contactDetails.email + "</a></p>";
+            detailsHTML += "<p><img class='social-icon' src='github.png' alt='github Icon'><a href='" + contactDetails.github + "' target='_blank'>" + contactDetails.github + "</a></p>";
+            // Add more lines like above for additional contact details
+
+            contactInfoDiv.innerHTML = detailsHTML;
+        }
+
+        // Call the function to display contact details
+        displayContactDetails();
+    </script>
+</body>
+
+</html>
